@@ -13,7 +13,7 @@ import joblib
 # Configure logging
 # ---------------------------------------------------------
 logging.basicConfig(
-    filename='training_tabular_labelnoise_corr.log',
+    filename='check_features.log',
     level=logging.INFO, filemode='w', format='%(message)s'
 )
 logging.getLogger().addHandler(logging.StreamHandler())
