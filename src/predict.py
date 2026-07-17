@@ -134,7 +134,12 @@ def predict_churn(input_data):
         feature_names
     ]
 
+    # Validate input features before prediction
 
+    if list(input_data.columns) != feature_names:
+        raise ValueError(
+            "Input features do not match training features"
+        )
     # -----------------------------------------------------
     # Generate prediction
     # -----------------------------------------------------
