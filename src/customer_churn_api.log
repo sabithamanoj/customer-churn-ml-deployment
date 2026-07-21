@@ -1,0 +1,123 @@
+2026-07-21 08:58:00,727 - INFO - Customer Churn Prediction API started.
+2026-07-21 08:58:00,789 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.80:5000
+2026-07-21 08:58:00,790 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-21 08:58:00,794 - INFO -  * Restarting with stat
+2026-07-21 08:58:03,229 - INFO - Customer Churn Prediction API started.
+2026-07-21 08:58:03,239 - WARNING -  * Debugger is active!
+2026-07-21 08:58:03,255 - INFO -  * Debugger PIN: 389-849-644
+2026-07-21 09:00:54,562 - INFO - Customer Churn Prediction API started.
+2026-07-21 09:00:54,593 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.2.80:5000
+2026-07-21 09:00:54,593 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-21 09:00:54,594 - INFO -  * Restarting with stat
+2026-07-21 09:00:56,784 - INFO - Customer Churn Prediction API started.
+2026-07-21 09:00:56,801 - WARNING -  * Debugger is active!
+2026-07-21 09:00:56,812 - INFO -  * Debugger PIN: 389-849-644
+2026-07-21 09:05:31,504 - INFO - Customer Churn Prediction API started.
+2026-07-21 09:05:31,524 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-21 09:05:31,524 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-21 09:12:51,894 - INFO - Customer Churn Prediction API started.
+2026-07-21 09:12:51,912 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-21 09:12:51,912 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-21 09:15:44,049 - INFO - Customer Churn Prediction API started.
+2026-07-21 09:15:44,050 - INFO - Starting Flask server...
+2026-07-21 09:15:44,067 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-21 09:15:44,067 - INFO - [33mPress CTRL+C to quit[0m
+2026-07-21 09:16:23,893 - INFO - Customer Churn Prediction API initialized.
+2026-07-21 09:18:02,381 - INFO - Health check endpoint called.
+2026-07-21 09:25:31,333 - ERROR - Prediction failed.
+Traceback (most recent call last):
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\werkzeug\wrappers\request.py", line 611, in get_json
+    rv = self.json_module.loads(data)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\flask\json\provider.py", line 187, in loads
+    return json.loads(s, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\flask\wrappers.py", line 214, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\werkzeug\wrappers\request.py", line 645, in on_json_loading_failed
+    raise BadRequest(f"Failed to decode JSON object: {e}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sucess\PycharmProjects\customer-churn-ml-deployment\src\app.py", line 100, in predict
+    customer_data = request.get_json()
+                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\werkzeug\wrappers\request.py", line 620, in get_json
+    rv = self.on_json_loading_failed(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\flask\wrappers.py", line 219, in on_json_loading_failed
+    raise BadRequest() from ebr
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2026-07-21 09:27:38,461 - INFO - Health check endpoint called.
+2026-07-21 09:28:21,237 - ERROR - Prediction failed.
+Traceback (most recent call last):
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\werkzeug\wrappers\request.py", line 611, in get_json
+    rv = self.json_module.loads(data)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\flask\json\provider.py", line 187, in loads
+    return json.loads(s, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\flask\wrappers.py", line 214, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\werkzeug\wrappers\request.py", line 645, in on_json_loading_failed
+    raise BadRequest(f"Failed to decode JSON object: {e}")
+werkzeug.exceptions.BadRequest: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 1 (char 0)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Sucess\PycharmProjects\customer-churn-ml-deployment\src\app.py", line 100, in predict
+    customer_data = request.get_json()
+                    ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\werkzeug\wrappers\request.py", line 620, in get_json
+    rv = self.on_json_loading_failed(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Sucess\Anaconda3\envs\customer_churn_env\Lib\site-packages\flask\wrappers.py", line 219, in on_json_loading_failed
+    raise BadRequest() from ebr
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2026-07-21 09:29:08,008 - INFO - Received input: {'gender': 'Female', 'SeniorCitizen': 0, 'Partner': 'Yes', 'Dependents': 'No', 'tenure': 12, 'PhoneService': 'Yes', 'InternetService': 'Fiber optic', 'Contract': 'Month-to-month', 'PaymentMethod': 'Electronic check', 'MonthlyCharges': 80, 'TotalCharges': 960}
+2026-07-21 09:29:08,104 - INFO - Preprocessing completed. Shape: (1, 30)
+2026-07-21 09:29:08,136 - INFO - Prediction result: {'prediction': 'No Churn', 'churn_probability': 0.2095}
+2026-07-21 09:45:56,248 - INFO - Received input: {'gender': 'Female', 'SeniorCitizen': 0, 'Partner': 'Yes', 'Dependents': 'No', 'tenure': 12, 'PhoneService': 'Yes', 'InternetService': 'Fiber optic', 'Contract': 'Month-to-month', 'PaymentMethod': 'Electronic check', 'MonthlyCharges': 80, 'TotalCharges': 960}
+2026-07-21 09:45:56,261 - INFO - Preprocessing completed. Shape: (1, 30)
+2026-07-21 09:45:56,267 - INFO - Prediction result: {'prediction': 'No Churn', 'churn_probability': 0.2095}
+2026-07-21 10:58:05,593 - INFO - Customer Churn Prediction API initialized.

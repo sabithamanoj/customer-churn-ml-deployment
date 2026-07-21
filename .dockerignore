@@ -1,0 +1,13 @@
+__pycache__
+*.pyc
+
+.git
+.idea
+
+.ipynb_checkpoints
+
+*.log
+
+notebooks
+reports
+.postman
